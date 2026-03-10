@@ -3,6 +3,7 @@ package problems
 import com.herrajeselpaisa.problems.fibonacciIterative
 import com.herrajeselpaisa.problems.fibonacciMemoization
 import com.herrajeselpaisa.problems.fibonacciRecursive
+import com.herrajeselpaisa.problems.fibonacciTail
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -28,6 +29,28 @@ class FibonacciTest {
 
         // f(6) = f(5) + f(4) = 4 + 3 = 8
         assertEquals(8, fibonacciRecursive(6))
+    }
+
+    @Test
+    fun `fibonacciTail should return n for n less than or equal to 2`() {
+        assertEquals(0, fibonacciTail(0))
+        assertEquals(1, fibonacciTail(1))
+        assertEquals(1, fibonacciTail(2))
+    }
+
+    @Test
+    fun `fibonacciTail should return sum of previous two numbers for n greater than 2`() {
+        // f(3) = f(2) + f(1) = 1 + 1 = 2
+        assertEquals(2, fibonacciTail(3))
+
+        // f(4) = f(3) + f(2) = 2 + 1 = 3
+        assertEquals(3, fibonacciTail(4))
+
+        // f(5) = f(4) + f(3) = 3 + 2 = 5
+        assertEquals(5, fibonacciTail(5))
+
+        // f(6) = f(5) + f(4) = 4 + 3 = 8
+        assertEquals(8, fibonacciTail(6))
     }
 
     @Test
@@ -92,6 +115,12 @@ class FibonacciTest {
         result = fibonacciMemoization(23)
         end = System.nanoTime()
         println("Time to resolve fibonacciMemoization(23): ${end - start} ns")
+        assertEquals(28657, result)
+
+        start = System.nanoTime()
+        result = fibonacciTail(23)
+        end = System.nanoTime()
+        println("Time to resolve fibonacciTail(23): ${end - start} ns")
         assertEquals(28657, result)
     }
 }

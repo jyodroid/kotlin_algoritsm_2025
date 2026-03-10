@@ -7,6 +7,18 @@ fun fibonacciRecursive(n: Int): Long {
     return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
 }
 
+// tailrec keyword allows the function to call itself without growing the call stack, preventing stack overflow for large n
+// Essentially, it turns your recursion into a while loop behind the scenes
+tailrec fun fibonacciTail(n: Int, a: Long = 0, b: Long = 1): Long {
+    // Base case: we've reached the target
+    if (n == 0) return a
+    if (n == 1) return b
+
+    // Recursive step: we pass the "next" values down
+    // Notice: there is no math happening AFTER the call!
+    return fibonacciTail(n - 1, b, a + b)
+}
+
 // Iterative approach
 fun fibonacciIterative(n: Int): Long {
     if (n < 0) throw IllegalArgumentException("Input must be a non-negative integer")
@@ -18,7 +30,7 @@ fun fibonacciIterative(n: Int): Long {
     while (count <= n) {
         value = prev2 + prev1
         prev1 = prev2
-        prev2 =value
+        prev2 = value
         count++
     }
 

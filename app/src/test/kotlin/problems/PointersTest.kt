@@ -2,8 +2,11 @@ package problems
 
 import com.herrajeselpaisa.problems.findMostHighLines
 import com.herrajeselpaisa.problems.pairWithTargetSum
+import com.herrajeselpaisa.problems.sortedNoDecreasingArray
 import com.herrajeselpaisa.problems.trappedWater
+import com.herrajeselpaisa.problems.unsortedArray
 import org.junit.jupiter.api.Test
+import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 
 class PointersTest {
@@ -44,5 +47,61 @@ class PointersTest {
         val result = trappedWater(nums)
 
         assertEquals(result, 6)
+    }
+
+    @Test
+    fun `test sortedNoDecreasingArray with repeated elements`() {
+        val nums = intArrayOf(1, 1, 1, 2)
+        val result = sortedNoDecreasingArray(nums)
+        assertContentEquals(intArrayOf(1, 2), result)
+    }
+
+    @Test
+    fun `test sortedNoDecreasingArray with multiple duplicates`() {
+        val nums = intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)
+        val result = sortedNoDecreasingArray(nums)
+        assertContentEquals(intArrayOf(0, 1, 2, 3, 4), result)
+    }
+
+    @Test
+    fun `test sortedNoDecreasingArray with no duplicates`() {
+        val nums = intArrayOf(1, 2, 3)
+        val result = sortedNoDecreasingArray(nums)
+        assertContentEquals(intArrayOf(1, 2, 3), result)
+    }
+
+    @Test
+    fun `test sortedNoDecreasingArray with single element`() {
+        val nums = intArrayOf(1)
+        val result = sortedNoDecreasingArray(nums)
+        assertContentEquals(intArrayOf(1), result)
+    }
+
+    @Test
+    fun `test unsortedArray with repeated elements`() {
+        val nums = intArrayOf(2, 1, 2, 1, 1, 1)
+        val result = unsortedArray(nums)
+        assertContentEquals(intArrayOf(2, 1), result)
+    }
+
+    @Test
+    fun `test unsortedArray with multiple duplicates`() {
+        val nums = intArrayOf(4, 0, 3, 1, 0, 3, 2, 1, 2, 4)
+        val result = unsortedArray(nums)
+        assertContentEquals(intArrayOf(4, 0, 3, 1, 2), result)
+    }
+
+    @Test
+    fun `test unsortedArray with no duplicates`() {
+        val nums = intArrayOf(3, 1, 2)
+        val result = unsortedArray(nums)
+        assertContentEquals(intArrayOf(3, 1, 2), result)
+    }
+
+    @Test
+    fun `test unsortedArray with single element`() {
+        val nums = intArrayOf(1)
+        val result = unsortedArray(nums)
+        assertContentEquals(intArrayOf(1), result)
     }
 }

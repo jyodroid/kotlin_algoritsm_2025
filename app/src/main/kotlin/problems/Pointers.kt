@@ -79,3 +79,36 @@ fun trappedWater(height: IntArray): Int{
 
     return trapped
 }
+
+// Move the non repeated elements to the start of the array and return the subarray with sorted elements
+fun sortedNoDecreasingArray(nums: IntArray): IntArray {
+    // use two printers
+    var writer = 0
+
+    for (reader in 1 until nums.size) {
+        if (nums[reader] != nums[writer]) {
+            writer++
+            nums[writer] = nums[reader]
+        }
+    }
+
+    return nums.sliceArray(0..writer)
+}
+
+fun unsortedArray(nums: IntArray): IntArray {
+    if (nums.isEmpty()) return nums
+
+    var writer = 0
+    val seen = hashSetOf<Int>()
+    seen.add(nums[0])
+
+    for (reader in 1 until nums.size) {
+        if (!seen.contains(nums[reader])) {
+            writer++
+            nums[writer] = nums[reader]
+            seen.add(nums[writer])
+        }
+    }
+
+    return nums.sliceArray(0..writer)
+}

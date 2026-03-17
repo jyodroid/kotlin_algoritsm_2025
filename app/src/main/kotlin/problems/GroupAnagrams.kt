@@ -1,4 +1,6 @@
-package com.herrajeselpaisa.problems
+package problems
+
+import kotlin.text.iterator
 
 //Imagine you are building a Task Management app. You receive a list of task strings, where each string is a category name.
 // Some names are anagrams of each other (e.g., "now" and "own"). To clean up the UI, you need to group these anagrams together.

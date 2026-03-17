@@ -1,8 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.groupAnagrams
-import com.herrajeselpaisa.problems.groupAnagrams2
-import com.herrajeselpaisa.problems.groupAnagrams3
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

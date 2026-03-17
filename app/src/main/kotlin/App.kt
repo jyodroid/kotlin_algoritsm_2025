@@ -1,10 +1,3 @@
-package com.herrajeselpaisa
-
-import com.herrajeselpaisa.problems.SmartDevice
-import com.herrajeselpaisa.problems.SmartHome
-import com.herrajeselpaisa.problems.SmartLightDevice
-import com.herrajeselpaisa.problems.SmartTvDevice
-
 fun main() {
     val smartTvDevice = SmartDevice(name = "Android TV")
     smartTvDevice.turnOn()

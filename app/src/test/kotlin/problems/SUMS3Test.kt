@@ -1,6 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.sumsProblem3
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

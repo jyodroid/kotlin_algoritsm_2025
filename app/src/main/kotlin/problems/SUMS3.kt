@@ -1,4 +1,4 @@
-package com.herrajeselpaisa.problems
+package problems
 
 /**
  * The 3SUMS problem

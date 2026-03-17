@@ -1,12 +1,7 @@
 package problems
 
-import com.herrajeselpaisa.problems.fibonacciIterative
-import com.herrajeselpaisa.problems.fibonacciMemoization
-import com.herrajeselpaisa.problems.fibonacciRecursive
-import com.herrajeselpaisa.problems.fibonacciTail
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class FibonacciTest {
     @Test

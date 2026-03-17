@@ -1,4 +1,4 @@
-package com.herrajeselpaisa.problems
+package problems
 
 /**
  * Find in an array the index of two numbers that the sum is equal to a target value

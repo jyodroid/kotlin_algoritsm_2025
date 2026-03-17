@@ -1,5 +1,3 @@
-package com.herrajeselpaisa.problems
-
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 

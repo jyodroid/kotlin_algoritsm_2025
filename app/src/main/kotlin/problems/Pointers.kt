@@ -1,5 +1,6 @@
-package com.herrajeselpaisa.problems
+package problems
 
+import kotlin.collections.sorted
 import kotlin.math.min
 
 /**
@@ -111,4 +112,22 @@ fun unsortedArray(nums: IntArray): IntArray {
     }
 
     return nums.sliceArray(0..writer)
+}
+
+fun minNeeded(intervals: Array<IntArray>): Int {
+    val stars = intervals.map{it[0]}.sorted()
+    val ends = intervals.map{it[1]}.sorted()
+
+    var total = 0
+    var endPointer = 0
+
+    for (starPointer in stars.indices){
+        if (stars[starPointer] < ends[endPointer]){
+            total++
+        } else{
+            endPointer++
+        }
+    }
+
+    return total
 }

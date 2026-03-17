@@ -1,10 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.findMostHighLines
-import com.herrajeselpaisa.problems.pairWithTargetSum
-import com.herrajeselpaisa.problems.sortedNoDecreasingArray
-import com.herrajeselpaisa.problems.trappedWater
-import com.herrajeselpaisa.problems.unsortedArray
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals

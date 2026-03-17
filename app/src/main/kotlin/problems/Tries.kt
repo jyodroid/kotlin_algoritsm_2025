@@ -1,4 +1,6 @@
-package com.herrajeselpaisa.problems
+package problems
+
+import kotlin.text.iterator
 
 //You are designing a feature for a contacts app. Given a large list of names, you need to quickly find all
 // names that start with a specific prefix.

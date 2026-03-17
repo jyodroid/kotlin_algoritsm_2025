@@ -1,8 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.bridge
-import com.herrajeselpaisa.problems.greatestCommonDivisor
-import com.herrajeselpaisa.problems.leastCommonMultiple
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

@@ -1,4 +1,7 @@
-package com.herrajeselpaisa.problems
+package problems
+
+import java.util.PriorityQueue
+import kotlin.text.iterator
 
 /**
  * Given a string s, return the first non-repeated character.
@@ -61,7 +64,7 @@ fun mostFrequent(nums: IntArray, k: Int): IntArray {
     }
 
     // priority Queue
-    val pq = java.util.PriorityQueue<Map.Entry<Int, Int>> { a, b ->
+    val pq = PriorityQueue<Map.Entry<Int, Int>> { a, b ->
         b.value - a.value // max-heap by frequency
     }
     pq.addAll(freq.entries)
@@ -82,7 +85,7 @@ fun mostFrequent2(nums: IntArray, k: Int): IntArray {
 
     //    If frequencies are equal, orders by value descending (so that when popping, the larger number is removed
     //    first — this leaves the smaller in the heap).
-    val pq = java.util.PriorityQueue<Map.Entry<Int, Int>> { a, b ->
+    val pq = PriorityQueue<Map.Entry<Int, Int>> { a, b ->
         if (a.value == b.value) b.key - a.key
         else a.value - b.value
     }

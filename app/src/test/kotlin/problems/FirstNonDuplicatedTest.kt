@@ -1,9 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.firstNonRepeatedChar
-import com.herrajeselpaisa.problems.firstNonRepeatedCharBruteForce
-import com.herrajeselpaisa.problems.mostFrequent
-import com.herrajeselpaisa.problems.mostFrequent2
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

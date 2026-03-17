@@ -1,8 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.findTwoNumbers
-import com.herrajeselpaisa.problems.findTwoNumbersHashMap
-import com.herrajeselpaisa.problems.findTwoNumbersPointers
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

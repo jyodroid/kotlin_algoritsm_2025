@@ -1,7 +1,5 @@
 package problems
 
-import com.herrajeselpaisa.problems.predictiveSearch
-import com.herrajeselpaisa.problems.predictiveSearchWithRadix
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

@@ -1,4 +1,4 @@
-package com.herrajeselpaisa.problems
+package problems
 
 // Recursive approach
 fun fibonacciRecursive(n: Int): Long {
